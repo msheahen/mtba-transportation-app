@@ -3,7 +3,6 @@ var gutil = require('gulp-util');
 
 /* Let's preprocess our scss into css files!  */
 
-
 var sass = require('gulp-sass');
 var postcss = require('gulp-postcss');
 var scss = require('postcss-scss');
@@ -32,9 +31,6 @@ gulp.task('css', function() {
 		.pipe(gulp.dest('dist/assets/css'));
 });
 
-
-
-
 /* Yay, now let's uglify our javascript! */
 var uglify = require('gulp-uglify');
 var jsFiles = 'src/scripts/**/*.js';
@@ -55,8 +51,10 @@ gulp.task('js', function() {
 
 
 
-/* Sweet, now we need to move our html files into dist and
-process our handlebars templates into the right format as well! */
+/*
+Sweet, now we need to move our html files into dist and
+process our handlebars templates into the right format as well!
+*/
 
 var fileinclude = require('gulp-file-include');
 
@@ -70,28 +68,9 @@ gulp.task('fileinclude', function() {
 });
 
 
-var handlebars = require('gulp-handlebars');
-var wrap = require('gulp-wrap');
-var declare = require('gulp-declare');
-var concat = require('gulp-concat');
-
-gulp.task('templates', function () {
-    gulp.src('src/views/*.hbs')
-      .pipe(handlebars())
-      .pipe(wrap('Handlebars.template(<%= contents %>)'))
-      .pipe(declare({
-          namespace: 'MyApp.templates',
-          noRedeclare: true, // Avoid duplicate declarations
-      }))
-      .pipe(concat('templates.js'))
-      .pipe(gulp.dest('dist/assets/js/'));
-});
-
-
-
-
-/* serve it up! */
-
+/*
+serve it up!
+*/
 var browserSync = require('browser-sync');
 gulp.task('connectWithBrowserSync', function() {
 	browserSync.create();
@@ -100,20 +79,18 @@ gulp.task('connectWithBrowserSync', function() {
 	});
 });
 
-
-
-
-
-/*  watch for changes in our code to we can auto-reload */
-
+/*
+watch for changes in our code to we can auto-reload
+*/
 gulp.task('watch', function() {
 	gulp.watch(sassFiles,['css']).on('change', browserSync.reload);
 	gulp.watch(jsFiles,['js']).on('change', browserSync.reload);
-	gulp.watch(['src/views/*.html', 'src/views/templates/*.hbs'], ['fileinclude', 'templates']).on('change', browserSync.reload);
+	gulp.watch(['src/views/*.html'], ['fileinclude']).on('change', browserSync.reload);
 });
 
 
 
-/* gulp serve will get our page up and running! */
-
-gulp.task('serve', ['connectWithBrowserSync', 'css', 'js', 'fileinclude', 'templates', 'watch']);
+/*
+ gulp serve will get our page up and running!
+ */
+gulp.task('serve', ['connectWithBrowserSync', 'css', 'js', 'fileinclude', 'watch']);

@@ -36,8 +36,5 @@
     "postcss-scss": "^0.1.5",
     "browser-sync": "^2.12.8",
     "gulp-util": "^3.0.6"
-  },
-  "dependencies": {
-    "toastr": "^2.1.2"
   }
 }

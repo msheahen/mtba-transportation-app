@@ -1,5 +1,4 @@
-var appPrefix = 'mtba-trans-';
-var currentCacheName = appPrefix+'static-v1';
+var currentCacheName = 'mtba-trans-static-v5';
 
 self.addEventListener('install', function(event) {
 
@@ -9,12 +8,22 @@ self.addEventListener('install', function(event) {
 		'./assets/js/jquery.min.js',
     './assets/js/idb.min.js',
 		'./assets/js/bootstrap.min.js',
-    './assets/js/toastr.min.js',
 		'./assets/js/main.js',
 		'./assets/data/routes.json',
-    './assets/toastr.css',
     './assets/css/bootstrap.min.css',
-		'./assets/css/main.css'
+		'./assets/css/main.css',
+    './assets/data/CR-Fairmount.json',
+    './assets/data/CR-Fitchburg.json',
+    './assets/data/CR-Franklin.json',
+    './assets/data/CR-Greenbush.json',
+    './assets/data/CR-Haverhill.json',
+    './assets/data/CR-Kingston.json',
+    './assets/data/CR-Lowell.json',
+    './assets/data/CR-Middleborough.json',
+    './assets/data/CR-Needham.json',
+    './assets/data/CR-Newburyport.json',
+    './assets/data/CR-Providence.json',
+    './assets/data/CR-Worcester.json'
 	];
 
 	event.waitUntil(
@@ -29,22 +38,22 @@ self.addEventListener('install', function(event) {
 self.addEventListener('activate', function(event) {
 	event.waitUntil(
 
-		// Get all cache keys (cacheNames)
+    // Activate and make sure we upgrade if needed.
 		caches.keys().then(function(cacheNames) {
 			return Promise.all(
 				cacheNames.filter(function(cacheName) {
 
-					// Return all the caches that start with the appPrefix
-					// AND are not the current static cache name
-					return cacheName.startsWith(appPrefix) &&
+					return cacheName.startsWith('mtba-trans-') &&
 					cacheName != currentCacheName;
 				}).map(function(cacheName) {
+
 					return caches.delete(cacheName);
 				})
 			);
 		})
 	);
 });
+
 
 self.addEventListener('fetch', function(event) {
 
@@ -58,12 +67,7 @@ self.addEventListener('fetch', function(event) {
 
 
 self.addEventListener('message', function(event) {
-	if (!event.data.action) { return; }
-
-	switch(event.data.action) {
-		case 'skipWaiting':
-			self.skipWaiting();
-		default:
-			return;
-	}
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
 });
