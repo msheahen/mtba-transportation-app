@@ -1,0 +1,251 @@
+{
+    "direction": [{
+        "direction_id": "0",
+        "direction_name": "Outbound",
+        "stop": [{
+            "stop_order": "1",
+            "stop_id": "South Station",
+            "stop_name": "South Station",
+            "parent_station": "place-sstat",
+            "parent_station_name": "South Station",
+            "stop_lat": "42.35176309",
+            "stop_lon": "-71.05479665"
+        }, {
+            "stop_order": "2",
+            "stop_id": "Back Bay",
+            "stop_name": "Back Bay",
+            "parent_station": "place-bbsta",
+            "parent_station_name": "Back Bay",
+            "stop_lat": "42.347487",
+            "stop_lon": "-71.075399"
+        }, {
+            "stop_order": "3",
+            "stop_id": "Ruggles",
+            "stop_name": "Ruggles",
+            "parent_station": "place-rugg",
+            "parent_station_name": "Ruggles",
+            "stop_lat": "42.336505",
+            "stop_lon": "-71.089189"
+        }, {
+            "stop_order": "4",
+            "stop_id": "Hyde Park",
+            "stop_name": "Hyde Park",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.25503",
+            "stop_lon": "-71.125526"
+        }, {
+            "stop_order": "5",
+            "stop_id": "Route 128",
+            "stop_name": "Route 128",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.209884",
+            "stop_lon": "-71.1471"
+        }, {
+            "stop_order": "6",
+            "stop_id": "Canton Junction",
+            "stop_name": "Canton Junction",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.163204",
+            "stop_lon": "-71.15376"
+        }, {
+            "stop_order": "7",
+            "stop_id": "Canton Center",
+            "stop_name": "Canton Center",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.15677",
+            "stop_lon": "-71.145601"
+        }, {
+            "stop_order": "7",
+            "stop_id": "Sharon",
+            "stop_name": "Sharon",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.124553",
+            "stop_lon": "-71.184468"
+        }, {
+            "stop_order": "8",
+            "stop_id": "Mansfield",
+            "stop_name": "Mansfield",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.032787",
+            "stop_lon": "-71.219917"
+        }, {
+            "stop_order": "8",
+            "stop_id": "Stoughton",
+            "stop_name": "Stoughton",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.124084",
+            "stop_lon": "-71.103627"
+        }, {
+            "stop_order": "9",
+            "stop_id": "Attleboro",
+            "stop_name": "Attleboro",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.940739",
+            "stop_lon": "-71.285094"
+        }, {
+            "stop_order": "10",
+            "stop_id": "South Attleboro",
+            "stop_name": "South Attleboro",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.897943",
+            "stop_lon": "-71.354621"
+        }, {
+            "stop_order": "11",
+            "stop_id": "Providence",
+            "stop_name": "Providence",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.829293",
+            "stop_lon": "-71.413301"
+        }, {
+            "stop_order": "12",
+            "stop_id": "TF Green Airport",
+            "stop_name": "TF Green Airport",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.726599",
+            "stop_lon": "-71.442453"
+        }, {
+            "stop_order": "13",
+            "stop_id": "Wickford Junction",
+            "stop_name": "Wickford Junction",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.581289",
+            "stop_lon": "-71.491147"
+        }]
+    }, {
+        "direction_id": "1",
+        "direction_name": "Inbound",
+        "stop": [{
+            "stop_order": "1",
+            "stop_id": "Stoughton",
+            "stop_name": "Stoughton",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.124084",
+            "stop_lon": "-71.103627"
+        }, {
+            "stop_order": "1",
+            "stop_id": "Wickford Junction",
+            "stop_name": "Wickford Junction",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.581289",
+            "stop_lon": "-71.491147"
+        }, {
+            "stop_order": "2",
+            "stop_id": "TF Green Airport",
+            "stop_name": "TF Green Airport",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.726599",
+            "stop_lon": "-71.442453"
+        }, {
+            "stop_order": "2",
+            "stop_id": "Canton Center",
+            "stop_name": "Canton Center",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.15677",
+            "stop_lon": "-71.145601"
+        }, {
+            "stop_order": "3",
+            "stop_id": "Providence",
+            "stop_name": "Providence",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.829293",
+            "stop_lon": "-71.413301"
+        }, {
+            "stop_order": "4",
+            "stop_id": "South Attleboro",
+            "stop_name": "South Attleboro",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.897943",
+            "stop_lon": "-71.354621"
+        }, {
+            "stop_order": "5",
+            "stop_id": "Attleboro",
+            "stop_name": "Attleboro",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "41.940739",
+            "stop_lon": "-71.285094"
+        }, {
+            "stop_order": "6",
+            "stop_id": "Mansfield",
+            "stop_name": "Mansfield",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.032787",
+            "stop_lon": "-71.219917"
+        }, {
+            "stop_order": "7",
+            "stop_id": "Sharon",
+            "stop_name": "Sharon",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.124553",
+            "stop_lon": "-71.184468"
+        }, {
+            "stop_order": "8",
+            "stop_id": "Canton Junction",
+            "stop_name": "Canton Junction",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.163204",
+            "stop_lon": "-71.15376"
+        }, {
+            "stop_order": "9",
+            "stop_id": "Route 128",
+            "stop_name": "Route 128",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.209884",
+            "stop_lon": "-71.1471"
+        }, {
+            "stop_order": "10",
+            "stop_id": "Hyde Park",
+            "stop_name": "Hyde Park",
+            "parent_station": "",
+            "parent_station_name": "",
+            "stop_lat": "42.25503",
+            "stop_lon": "-71.125526"
+        }, {
+            "stop_order": "11",
+            "stop_id": "Ruggles",
+            "stop_name": "Ruggles",
+            "parent_station": "place-rugg",
+            "parent_station_name": "Ruggles",
+            "stop_lat": "42.336505",
+            "stop_lon": "-71.089189"
+        }, {
+            "stop_order": "12",
+            "stop_id": "Back Bay",
+            "stop_name": "Back Bay",
+            "parent_station": "place-bbsta",
+            "parent_station_name": "Back Bay",
+            "stop_lat": "42.347487",
+            "stop_lon": "-71.075399"
+        }, {
+            "stop_order": "13",
+            "stop_id": "South Station",
+            "stop_name": "South Station",
+            "parent_station": "place-sstat",
+            "parent_station_name": "South Station",
+            "stop_lat": "42.35176309",
+            "stop_lon": "-71.05479665"
+        }]
+    }]
+}
