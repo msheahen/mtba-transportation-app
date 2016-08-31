@@ -1,0 +1,40 @@
+{
+  "name": "mtba-transportation-app",
+  "version": "1.0.0",
+  "description": "offline-first transportation app for MTBA schedules",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msheahen/transportation-schedule-app.git"
+  },
+  "author": "Mary Sheahen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/msheahen/transportation-schedule-app/issues"
+  },
+  "homepage": "https://github.com/msheahen/transportation-schedule-app#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-babel": "^5.2.1",
+    "gulp-define-module": "^0.1.3",
+    "gulp-develop-server": "^0.4.3",
+    "gulp-handlebars": "^4.0.0",
+    "gulp-load-plugins": "^0.10.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.0.4",
+    "autoprefixer": "^6.3.3",
+    "gulp-wrap": "^0.13.0",
+    "gulp-postcss": "^6.1.0",
+    "gulp-file-include": "^0.13.7",
+    "gulp-uglify": "^1.5.3",
+    "gulp-concat": "^2.6.0",
+    "gulp-declare": "^0.3.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "postcss-scss": "^0.1.5",
+    "browser-sync": "^2.12.8",
+    "gulp-util": "^3.0.6"
+  }
+}
