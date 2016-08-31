@@ -28,7 +28,7 @@ npm install
 gulp serve
 ```
 
-You should now have the app server at [localhost:8888](http://localhost:3000)
+You should now have the app server at [localhost:3000](http://localhost:3000)
 
 # Dependencies used:
 * Bootstrap
