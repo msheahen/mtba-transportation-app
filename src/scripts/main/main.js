@@ -84,7 +84,7 @@ function createTripCard(tripData, departure, destination) {
     } else {
 
         var duration = (end_info.sch_arr_dt - start_info.sch_arr_dt) / 60;
-        var apiurl = "http://realtime.mbta.com/developer/api/v2/predictionsbytrip?api_key=" + apikey + "&trip=" + tripID + "&format=json";
+        var apiurl = "https://realtime.mbta.com/developer/api/v2/predictionsbytrip?api_key=" + apikey + "&trip=" + tripID + "&format=json";
 
         /* get predictin information (delays and alerts) for that trip
         if the train is late or early, update the time and put a message, otherwise say it's on time.
@@ -151,7 +151,7 @@ function getTrips(route, start, stop, direction){
 
   var queryParam = "&route=" + route + "&max_trips=100&max_time=1440&direction=" + direction;
 
-  var apiurl = "http://realtime.mbta.com/developer/api/v2/schedulebyroute?api_key=" + apikey + queryParam + "&format=json";
+  var apiurl = "https://realtime.mbta.com/developer/api/v2/schedulebyroute?api_key=" + apikey + queryParam + "&format=json";
 
   getJSON(apiurl)
     .then(function(json) {

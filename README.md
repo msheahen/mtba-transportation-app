@@ -30,6 +30,8 @@ gulp serve
 
 You should now have the app server at [localhost:3000](http://localhost:3000)
 
+You can also view the current version of this app at [my hosted github page](https://msheahen.github.io/mtba-transportation-app/)
+
 # Dependencies used:
 * Bootstrap
 * idb.js
