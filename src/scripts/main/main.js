@@ -167,8 +167,6 @@ function getTrips(route, start, stop, direction){
         if(!tripArray){
           reject();
         }else{
-          console.log(tripArray);
-
           /* clear the database ! */
           Controller.db.then(function(db) {
             var tx = db.transaction('trips', 'readwrite');
@@ -187,7 +185,7 @@ function getTrips(route, start, stop, direction){
 
     }).catch(function(error) {
 
-      displayMessage("Uh oh!  We were unable to retreive your trip from the api.  If you previously searched with us, here is your latest search results.", null, "dismiss", Controller.showSavedSearch());
+      displayMessage("Uh oh!  We were unable to retreive your trip from the api.  If you previously searched with us, here is your latest search results.  You can still view the map by navigating to \"Route Map\" in the menu.", null, "dismiss", Controller.showSavedSearch());
         $("#load").css({
             "display": "none"
         });
@@ -307,7 +305,8 @@ IndexController.prototype.showSavedSearch = function() {
 
 		return store.getAll();
 
-	}).then(function(response) {
+	}).catch(function(err){
+  }).then(function(response) {
 
 		if ( response.length === 0 ) {
 
@@ -326,7 +325,9 @@ IndexController.prototype.showSavedSearch = function() {
 
 		}
 
-	});
+	}).catch(function(error){
+
+  });
 };
 
 var Controller = new IndexController();
@@ -337,7 +338,7 @@ $(document).ready(function() {
 
 
     /*  Get our default list of routes */
-    getJSON('./assets/data/routes.json')
+    getJSON('assets/data/routes.json')
         .then(function(json) {
             var lineDropdown = "";
             json.mode.forEach(function(mode) {
@@ -355,7 +356,7 @@ $(document).ready(function() {
 
     $("#train-line").change(function() {
         $("#trip-options").html(" ");
-        getJSON('./assets/data/' + this.value + '.json')
+        getJSON('assets/data/' + this.value + '.json')
             .then(function(json) {
 
                 var stopList = "<option value='none' selected>--</option>";

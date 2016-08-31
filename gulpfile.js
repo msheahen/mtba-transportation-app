@@ -53,20 +53,29 @@ gulp.task('js', function() {
 
 /*
 Sweet, now we need to move our html files into dist and
-process our handlebars templates into the right format as well!
 */
 
 var fileinclude = require('gulp-file-include');
 
 gulp.task('fileinclude', function() {
-  gulp.src(['src/views/index.html'])
+  gulp.src('src/views/*.html')
     .pipe(fileinclude({
       prefix: '@@',
       basepath: '@file'
     }))
     .pipe(gulp.dest('dist/'));
+	gulp.src('assets')
+		.pipe(fileinclude({
+
+		})).pipe(gulp.dest('dist/'))
 });
 
+gulp.task('copy', function() {
+    gulp.src('assets/data/*.json')
+        .pipe(gulp.dest('dist/assets/data/'))
+    gulp.src('assets/images/*.png')
+        .pipe(gulp.dest('dist/assets/images/'))
+});
 
 /*
 serve it up!
@@ -93,4 +102,4 @@ gulp.task('watch', function() {
 /*
  gulp serve will get our page up and running!
  */
-gulp.task('serve', ['connectWithBrowserSync', 'css', 'js', 'fileinclude', 'watch']);
+gulp.task('serve', ['connectWithBrowserSync', 'css', 'js', 'fileinclude', 'copy', 'watch']);

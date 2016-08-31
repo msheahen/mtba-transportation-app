@@ -23,7 +23,9 @@ self.addEventListener('install', function(event) {
     './assets/data/CR-Needham.json',
     './assets/data/CR-Newburyport.json',
     './assets/data/CR-Providence.json',
-    './assets/data/CR-Worcester.json'
+    './assets/data/CR-Worcester.json',
+		'./assets/images/mtba-commuter-rail.png',
+		'./train-map.html'
 	];
 
 	event.waitUntil(
